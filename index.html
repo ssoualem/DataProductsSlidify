@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Visualising US State Facts and Figures with googleVis</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Visualising US State Facts and Figures with googleVis">
+  <meta name="author" content="">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Visualising US State Facts and Figures with googleVis</h1>
+    <h2>For the Developing Data Products course on Coursera</h2>
+    <p><br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Presentation</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This Shiny app uses the googleVis package to plot different statistics about US states on a map.</p>
+
+<p>The user can choose what information he wants to see.</p>
+
+<p>The data source is the &quot;state&quot; dataset from R.</p>
+
+<p>The app can be found here : <a href="https://ssoualem.shinyapps.io/DataProductsShiny/">https://ssoualem.shinyapps.io/DataProductsShiny/</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Available statistics for each state</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Population: Population estimate as of July 1, 1975 (in thousands)</p></li>
+<li><p>Income: Per capita income (1974)</p></li>
+<li><p>Illiteracy: Illiteracy rate (1970, percent of population)</p></li>
+<li><p>Life Expectancy: Life expectancy in years (1969–71)</p></li>
+<li><p>Murder rate: Murder and non-negligent manslaughter rate per 100,000 population (1976)</p></li>
+<li><p>High-school graduation rate: Percent high-school graduates (1970)</p></li>
+<li><p>Number of days below freezing: Mean number of days with minimum temperature below freezing (1931–1960) in capital or large city</p></li>
+<li><p>Area: Land area in square miles</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Data sample</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Source data sample</p>
+
+<pre><code class="r">data(state)
+head(state.x77, 4)
+</code></pre>
+
+<pre><code>##          Population Income Illiteracy Life Exp Murder HS Grad Frost   Area
+## Alabama        3615   3624        2.1    69.05   15.1    41.3    20  50708
+## Alaska          365   6315        1.5    69.31   11.3    66.7   152 566432
+## Arizona        2212   4530        1.8    70.55    7.8    58.1    15 113417
+## Arkansas       2110   3378        1.9    70.66   10.1    39.9    65  51945
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Demonstration</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/full_map.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" width="920" /></p>
+
+<p>Some information about the data is available in the sidebar.</p>
+
+<p>The precise figure can be seen by hovering the mouse over a state.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Presentation'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Available statistics for each state'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Data sample'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Demonstration'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
